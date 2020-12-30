@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">timetableRKU</string>
+    <string name="your_title">RKU Lecture Schedule</string>
+    <string name="no_lecture">NO lecture</string>
+    <string name="na">NA</string>
+
+    <string name="slot_sunday">Slot : Sunday</string>
+
+</resources>
