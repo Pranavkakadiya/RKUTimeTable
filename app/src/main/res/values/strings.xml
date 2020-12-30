@@ -5,5 +5,22 @@
     <string name="na">NA</string>
 
     <string name="slot_sunday">Slot : Sunday</string>
+    <string name="link_here">LINK HERE</string>
+    <string name="todo">TODO</string>
+    <string name="rajkot">Rajkot</string>
+    <string name="jj">JJ</string>
+    <string name="more_about_rku">More About RKU</string>
+    <string name="enjoy">Enjoy!!</string>
+    <string name="holiday">Holiday!!</string>
+    <string name="date">date</string>
+    <string name="todo">TODO</string>
+    <string name="date">date</string>
+    <string name="its_holiday">its holiday</string>
+    <string name="for_login_click_button">For login click Button</string>
+    <string name="email">email</string>
+    <string name="id">id</string>
+    <string name="logout">Logout</string>
+    <string name="todo">TODO</string>
+    <string name="name">name</string>
 
 </resources>

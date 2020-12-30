@@ -18,7 +18,8 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:background="@drawable/gradient"
-            android:src="@drawable/ic_baseline_person_24" />
+            android:src="@drawable/ic_baseline_person_24"
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/name"
@@ -27,9 +28,9 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/gradient"
             android:gravity="center"
-            android:text="name"
+            android:text="@string/name"
             android:textColor="@android:color/white"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/email"
@@ -38,9 +39,9 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/gradient"
             android:gravity="center"
-            android:text="email"
+            android:text="@string/email"
             android:textColor="@android:color/white"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/userId"
@@ -49,9 +50,9 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/gradient"
             android:gravity="center"
-            android:text="id"
+            android:text="@string/id"
             android:textColor="@android:color/white"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/logoutBtn"
@@ -59,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@drawable/gradient"
-            android:text="Logout" />
+            android:text="@string/logout" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

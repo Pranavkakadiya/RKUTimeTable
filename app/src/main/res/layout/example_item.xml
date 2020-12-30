@@ -83,7 +83,8 @@
                 android:src="@drawable/ic_baseline_arrow_downward_24"
 
                 android:textColor="@android:color/white"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:id="@+id/text_link"
@@ -92,10 +93,11 @@
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="LINK HERE"
+                android:text="@string/link_here"
                 android:textColor="@android:color/white"
 
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:focusable="true" />
 
 
         </LinearLayout>
