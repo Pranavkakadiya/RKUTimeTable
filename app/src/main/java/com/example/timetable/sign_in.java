@@ -31,6 +31,7 @@ public class sign_in extends AppCompatActivity {
         setContentView(R.layout.activity_sign_in);
         getSupportActionBar().setTitle("Account_Details");
         getSupportActionBar().setSubtitle("TimeTable App");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -67,6 +68,11 @@ public class sign_in extends AppCompatActivity {
             handleSignInResult(task);
         }
     }
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
+        return true;
+    }
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
@@ -82,13 +88,8 @@ public class sign_in extends AppCompatActivity {
             }
             Intent intent=new Intent(getApplicationContext(),account_Details.class);
             startActivity(intent);
-            // Signed in successfully, show authenticated UI.
-            //updateUI(account);
+
         } catch (ApiException e) {
-            // The ApiException status code indicates the detailed failure reason.
-            // Please refer to the GoogleSignInStatusCodes class reference for more information.
-            //Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
-            //updateUI(null);
             Log.d("Message",e.toString());
         }
     }

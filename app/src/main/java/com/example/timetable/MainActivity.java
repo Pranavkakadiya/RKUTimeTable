@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,6 +49,13 @@ public class MainActivity extends AppCompatActivity {//implements NavigationView
     //DrawerLayout drawerLayout;
     //ProgressBar progressBar;
 
+//    private DrawerLayout mDrawer;
+//    private Toolbar toolbar;
+//    private NavigationView nvDrawer;
+
+    // Make sure to be using androidx.appcompat.app.ActionBarDrawerToggle version.
+    private ActionBarDrawerToggle drawerToggle;
+
     LottieAnimationView animationView;
 
     long date = System.currentTimeMillis();
@@ -68,6 +76,29 @@ public class MainActivity extends AppCompatActivity {//implements NavigationView
        // progressBar= (ProgressBar) findViewById(R.id.progressBar);
 
         animationView = (LottieAnimationView) findViewById(R.id.animation_view);
+
+//        nvDrawer = (NavigationView) findViewById(R.id.nvView);
+//        // Setup drawer view
+//        setupDrawerContent(nvDrawer);
+
+
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//
+//        FrameLayout frameLayout = (FrameLayout) findViewById(R.id.flContent);
+//
+//        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.activity_main);
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+//                this, drawerLayout, toolbar, R.string.navigation_draw_open, R.string.navigation_draw_close);
+//        drawerLayout.setDrawerListener(toggle);
+//        toggle.syncState();
+//
+//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+//        navigationView.setNavigationItemSelectedListener(this);
+
+
+
+
 
 
 
@@ -97,6 +128,7 @@ public class MainActivity extends AppCompatActivity {//implements NavigationView
         ActionBar actionBar;
         actionBar = getSupportActionBar();
 
+
 //         Define ColorDrawable object and parse color
 //         using parseColor method
 //         with color hash code as its parameter
@@ -120,6 +152,28 @@ public class MainActivity extends AppCompatActivity {//implements NavigationView
         parseJSON();
 //        progressBar.setVisibility(View.VISIBLE);
     }
+
+
+
+//            fragment = (Fragment) fragmentClass.newInstance();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        // Insert the fragment by replacing any existing fragment
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+//
+//        // Highlight the selected item has been done by NavigationView
+//        menuItem.setChecked(true);
+//        // Set action bar title
+//        setTitle(menuItem.getTitle());
+//        // Close the navigation drawer
+//        mDrawer.closeDrawers();
+//    }
+//
+//    // ...
+//}
 
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -147,6 +201,11 @@ public class MainActivity extends AppCompatActivity {//implements NavigationView
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
+        return true;
     }
     private void parseJSON() {
        String url="https://script.google.com/a/rku.ac.in/macros/s/AKfycby506u5XB7HQj7TMY_ZbRRKWtww1N85bg4XLDeVFJKjP33EbPYj/exec?id=1iW4AauD3siDPm08eiyDRXuvRnnG9PDi8zepXKeIXFt8&sheet=TimeTable&header=1&row=2&Class=6BCA&Day=";
@@ -180,14 +239,6 @@ public class MainActivity extends AppCompatActivity {//implements NavigationView
                                 finish();
 
                             }
-//                            List<String> filtered = new ArrayList<>();
-//                            for (int i = 0; i < jsonArray.length(); i++) {
-//                                JSONObject obj1 = jsonArray.getJSONObject(i);
-////                                String id = obj.getString("id_estado");
-//                                if ("Monday".equals(obj1.getString("Day"))) {
-//                                    filtered.add(obj1.getJSONObject(""));
-//                                }
-//                            }
 
 
                         } catch (JSONException e) {
@@ -207,8 +258,6 @@ public class MainActivity extends AppCompatActivity {//implements NavigationView
             }
         });
         mRequestQueue.add(request);
-
-
     }
 //    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 //
