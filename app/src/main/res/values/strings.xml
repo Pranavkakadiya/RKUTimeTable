@@ -22,5 +22,8 @@
     <string name="name">name</string>
     <string name="todo">toto1</string>
     <string name="date">date1</string>
+<!--    //<string name="app_name">Navigation_drawer_frag_activity_both</string>-->
+    <string name="navigation_draw_open">open navigation drawer</string>
+    <string name="navigation_draw_close">close navigation drawer</string>
 
 </resources>

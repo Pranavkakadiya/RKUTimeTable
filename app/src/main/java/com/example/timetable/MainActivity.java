@@ -14,8 +14,13 @@ import android.view.animation.LayoutAnimationController;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,6 +32,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.navigation.NavigationView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -35,10 +41,11 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {//implements NavigationView.OnNavigationItemSelectedListener
     private RecyclerView mRecyclerView;
     private ExampleAdapter mExampleAdapter;
     private RequestQueue mRequestQueue;
+    //DrawerLayout drawerLayout;
     //ProgressBar progressBar;
 
     LottieAnimationView animationView;
@@ -64,17 +71,39 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        //drawerLayout = findViewById(R.id.nav_view);
+//        Toolbar toolbar = findViewById(R.id.toolbar);
+//
+//        NavigationView navigationView=findViewById(R.id.navigation_view);
+//        navigationView.setNavigationItemSelectedListener(this);
+
+        //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Homefragment());
+
+
+//This drawable shows a Hamburger icon when drawer is closed and an arrow when drawer is open. It animates between these two states as the drawer opens.
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_draw_open, R.string.navigation_draw_close);
+//        drawerLayout.addDrawerListener(toggle);
+//        toggle.syncState();
+//
+//
+//        if(savedInstanceState==null)
+//        {
+//            navigationView.setCheckedItem(R.id.home);
+//        }
+
+
+
 
         ActionBar actionBar;
         actionBar = getSupportActionBar();
 
-        // Define ColorDrawable object and parse color
-        // using parseColor method
-        // with color hash code as its parameter
+//         Define ColorDrawable object and parse color
+//         using parseColor method
+//         with color hash code as its parameter
         ColorDrawable colorDrawable
                 = new ColorDrawable(Color.parseColor("#32a8a4"));
 
-        // Set BackgroundDrawable
+//         Set BackgroundDrawable
         actionBar.setBackgroundDrawable(colorDrawable);
         animationView.playAnimation();
 
@@ -181,6 +210,46 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+//    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+//
+//        switch (menuItem.getItemId())
+//        {
+////            case R.id.home:
+////                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Homefragment()).commit();
+////                break;
+////            case R.id.user:
+////                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Userfragment()).commit();
+////                break;
+//            case R.id.camera:
+//                Intent intent1=new Intent(this,Dev_info.class);
+//                startActivity(intent1);
+//                break;
+//            case R.id.send:
+//                Intent intent=new Intent(this,account_Details.class);
+//                startActivity(intent);
+//                break;
+//        }
+//        drawerLayout.closeDrawer(GravityCompat.START);
+//
+//
+//
+//        return true;
+//    }
 
-
+    //@Override
+//    public void onBackPressed() {
+//
+//        if(drawerLayout.isDrawerOpen(GravityCompat.START))
+//        {
+//            drawerLayout.closeDrawer(GravityCompat.START);
+//        }
+//        else
+//        {
+//            super.onBackPressed();
+//        }
+//
+//    }
 }
+
+
+

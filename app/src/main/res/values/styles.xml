@@ -7,5 +7,9 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="color">#db041a</item>
     </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
 
 </resources>
